@@ -56,8 +56,7 @@ def pca_learning():
     result = pca.fit_transform(List_descr)
     print("Number of elements in the  input matrix  after PCA = ",str(len(List_descr)*pca_comon))
     print("Saving PCA .. Size of sift input vector reduced from "+str(128*Siftvariable)+" to "+str(pca_comon*Siftvariable))
-    print(pca.transform(List_descr)[0])
-    exit()
+
     pk.dump(pca, open('pca.pkl', 'wb'))
 
 
